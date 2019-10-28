@@ -1,10 +1,11 @@
-def print_lol(movies, level):
+def print_lol(movies, indent=False, level=0):
 
     for moive in movies:
 
         if isinstance(moive, list):
-           print_lol(moive, level+1)
+           print_lol(moive, indent, level+1)
         else:
-            for tab_stop in range(level):
-                print("\t", end="")
+            if indent:
+                for tab_stop in range(level):
+                    print("\t", end="")
             print(moive)
