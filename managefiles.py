@@ -1,12 +1,11 @@
 import os
-
+rep_word = "B"
 data1 = open('yuming.txt', mode='r',  encoding='utf-8')
 data_new = open('yuming2.txt', mode='w', encoding='utf-8')
 for line in data1:
-    if "A" in line:
-        line = line.replace("A", "A Said: ")
-    else:
-        line = line.replace("B", "B Said: ")
+    if rep_word in line:
+        line = line.replace(rep_word, rep_word+" SAID")
+
     data_new.write(line)
     data_new.flush()
 
