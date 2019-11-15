@@ -23,7 +23,7 @@ def get_file(file_name):
             data = ff.readline()
         return data.split(',')
     except:
-        print('error')
+        print('File not found~')
 james = get_file('james.txt')
 julie = get_file('julie.txt')
 mikey = get_file('mikey.txt')
